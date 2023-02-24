@@ -3,12 +3,12 @@
 <%= form_for @favorite do |f| %>
   <div>
     <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title , value: params[:favorite][:title]%>
   </div>
 
   <div>
     <%= f.label :release_date %>
-    <%= f.date_field :release_date %>
+    <%= f.date_field :release_date , value: params[:favorite][:release_date]%>
   </div>
 
   <%= f.submit %>
