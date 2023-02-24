@@ -1,0 +1,22 @@
+
+<h1>Favorite films</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Actions</th>
+</thead>
+<tbody>
+  <% @favorites.each do |favorite| %>
+    <tr>
+      <td><%= link_to favorite.title, edit_favorites_path({id: favorite['id']}) %></td>
+      <td>
+        <%= button_to "Delete", favorites_path({id: favorite['id']}), method: :delete, data: { confirm: "Are you sure you want to delete this film?" }, class: "btn btn-danger" %>
+      </td>
+    </tr>
+  <% end %>
+</tbody>
+</table>
+
+<%= link_to "Add new favorite", root_path, class: "btn btn-primary" %>
