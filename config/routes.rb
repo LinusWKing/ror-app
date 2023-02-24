@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
- 
-  resource :search, only: [:show]
+  
+  resource :favorites
+
+  root 'movies#index'
+
   
 end
