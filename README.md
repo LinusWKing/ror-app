@@ -7,7 +7,7 @@ This is a simple web application consuming the [TMDB Api](https://www.themoviedb
 
 Assuming that Docker and Docker-Compose are installed on the target machine.
 
-run` docker-compose build`
+run` docker-compose build` along side the necessary migrations
 
 Once done open the application on `0.0.0.0:3000`
 
